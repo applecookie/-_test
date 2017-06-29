@@ -1,0 +1,20 @@
+@include('components/head.html')
+<div class="slider">
+    <div class="slider__header">
+        <h1 class="slider__title">Лучшие инвестидеи</h1>
+    </div>
+    <div class="slider__body">
+        @include('components/preview.html')
+        @include('components/posts.html')
+    </div>
+    <a href="javascript:void(0);" class="slider__btn_prev"></a>
+    <a href="javascript:void(0);" class="slider__btn_next"></a>
+    <div class="slider__footer">
+        <a href="javascript:void(0);" class="btn footer__btn">
+            Показать все
+        </a>
+    </div>
+    <nav class="slider__controls"></nav>
+</div>
+<div class="slider__popup"></div>
+@include('components/footer.html')

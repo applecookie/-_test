@@ -1,0 +1,85 @@
+.slider__posts {
+  width: $right-column-width;
+  padding-left: $active-description-arrow-size;
+  display: flex;
+  flex-direction: column;
+  //overflow-y: auto;//2
+  //@include scrollbar;//2
+}
+
+.slider__post {
+  padding: 1em 1.4286em;
+  border-top: 2px solid $page-bg-color;
+  flex: 1 1 25%;//2 flex: 0 0 25%;
+  position: relative;
+  background-color: $primary-bg-color;
+  transition: .3s background-color ease-in, transform .5s ease-in;
+  &:hover {
+    cursor: pointer;
+    background-color: $active-slide-bg-color;
+  }
+  //fakeSlides
+  &:first-child, &:last-child {
+    display: none;
+  }
+}
+
+.slider__post_active {
+  background-color: $active-slide-bg-color;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -$active-description-arrow-size;
+    border-right: $active-description-arrow-size solid $active-slide-bg-color;
+    border-bottom: $active-description-arrow-size solid $transparent;
+    border-top: $active-description-arrow-size solid $transparent;
+  }
+}
+//"для крайних случаев"
+.description__category span,
+.post__title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post__category {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  &:after {
+    content: '';
+    font-size: .4286em;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    margin-top: .5em;
+    margin-left: 1em;
+    flex: none;
+  }
+  &.category_tech {
+    &:after {
+      background-color: $category-tech-color;
+    }
+  }
+  &.category_commerce {
+    &:after {
+      background-color: $category-commerce-color;
+    }
+  }
+  &.category_currency {
+    &:after {
+      background-color: $category-currency-color;
+    }
+  }
+}
+
+.post__p {
+  color: $sub-font-color;
+}
