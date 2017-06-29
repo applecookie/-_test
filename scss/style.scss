@@ -140,7 +140,7 @@ a, button {
     margin: $slider-padding-top auto;
     position: relative;
     border-radius: $default-border-radius;
-    //overflow: hidden;//2
+    overflow: hidden;
 }
 
 .slider__header,
@@ -324,3 +324,7 @@ a, button {
 @import "components/posts";
 
 @import "components/media1023.scss";
+
+.cat {
+    transition: none !important;
+}

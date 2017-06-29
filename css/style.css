@@ -91,7 +91,8 @@ a, button {
   min-width: 320px;
   margin: 40px auto;
   position: relative;
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden; }
 
 .slider__header,
 .slider__footer {
@@ -491,5 +492,8 @@ a, button {
   .slider__preview_active,
   .slider__post_active {
     opacity: 1; } }
+
+.cat {
+  transition: none !important; }
 
 /*# sourceMappingURL=style.css.map */
